@@ -1,0 +1,45 @@
+<div class="card">
+  <div class="card-body">
+
+    <div class="card-title">
+      <h1>{{ currCityWeather.name }}</h1>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 card-text">
+        <table class="table">
+          <tr>
+            <th>Humidity</th>
+            <td> {{currCityWeather.main.humidity }}</td>
+          </tr>
+          <tr>
+            <th>Temperature (Average)</th>
+            <td> {{currCityWeather.main.temp }}</td>
+          </tr>
+          <tr>
+            <th>Temperature (High)</th>
+            <td> {{currCityWeather.main.temp_max }}</td>
+          </tr>
+          <tr>
+            <th>Temperature (Low)</th>
+            <td> {{currCityWeather.main.temp_min }}</td>
+          </tr>
+          <tr>
+            <th>Pressure</th>
+            <td> {{currCityWeather.main.pressure }}</td>
+          </tr>
+          <tr>
+            <th>Conditions:</th>
+            <td>
+              <ul>
+                <li *ngFor="let conds of currCityWeather.weather">
+                  {{ conds.main }}
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+  
